@@ -1,6 +1,6 @@
 ---
 title: "the first post is the hardest"
-layout: post
+layout: single
 excerpt: "This template is full of gimicks and wizard code. There is a lot to learn"
 ---
 
