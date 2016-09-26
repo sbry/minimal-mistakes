@@ -18,4 +18,4 @@ And now: good luck committing this and good luck to github building it.
 
 
 
-[^1]: https://github.com/chentsulin/electron-react-boilerplate https://github.com/mxstbr/react-boilerplate https://github.com/coryhouse/react-slingshot
+[^1]: [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate) [react-boilerplate](https://github.com/mxstbr/react-boilerplate) [react-slingshot](https://github.com/coryhouse/react-slingshot) 
