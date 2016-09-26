@@ -1,7 +1,5 @@
 ---
 title: "the first post is the hardest"
-layout: single
-excerpt: "This template is full of gimicks and wizard code. There is a lot to learn"
 ---
 
 After a long time I want to continue to write down stuff I do or think about. Next time there is a chance it is here. Also I really like the speed of Git and Github and it might be fun to apply this to hosting. 
