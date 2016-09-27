@@ -4,7 +4,13 @@ title: "the first post is the hardest"
 
 After a long time I want to continue to write down stuff I do or think about. Next time there is a chance it is here. Also I really like the speed and ease of Git and Github and it might be fun to apply this to hosting.[^4]
 
-Today is also the day I decided on how to begin developing react and there are several application that just wait to be written.[^7] After trying several boilerplates from this [Github Search](https://github.com/search?o=desc&q=react+boilerplate&s=stars&type=Repositories&utf8=%E2%9C%93)[^1] They all have much too complex tooling.  In the fast-changing universe of node that means: They don't work and are not fixable by me without bleeding from the ears. I finally settled on the sensible `npm install -g create-react-app` from [close to the source](https://github.com/facebookincubator/create-react-app):
+Today is also the day I decided on how to begin developing react and there are several application that just wait to be written.[^7] After trying several boilerplates from this [Github Search](https://github.com/search?o=desc&q=react+boilerplate&s=stars&type=Repositories&utf8=%E2%9C%93):
+
+* [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
+* [react-boilerplate](https://github.com/mxstbr/react-boilerplate)
+* [react-slingshot](https://github.com/coryhouse/react-slingshot)
+
+They all have much too complex tooling.  In the fast-changing universe of node that means: They don't work and are not fixable by me without bleeding from the ears. I finally settled on the sensible `npm install -g create-react-app` from [close to the source](https://github.com/facebookincubator/create-react-app):
 
 > But the Facebook team recognized that as long as there wasn't a core-team sanctioned solution, the community was likely to remain splintered. ([How to get "create-react-app" to work with your API](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/))
 
@@ -93,9 +99,7 @@ And now: good luck committing this and good luck to github building it. Later I 
 
 
 
-[^1]: * [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
-* [react-boilerplate](https://github.com/mxstbr/react-boilerplate)
-* [react-slingshot](https://github.com/coryhouse/react-slingshot)
+
 
 [^2]: And it is really easy to become a hater of Hillary's hypocricy even if one is no thruther, or birther, or Benghazian. I mean especially as a Democrat, how Bernie Sanders was treated. And what happened to Seth Rich?
 
