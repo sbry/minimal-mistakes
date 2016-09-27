@@ -107,8 +107,7 @@ And now: good luck committing this and good luck to github building it. Later I 
 
 [^5]: There is now even ES7 and they are called "emerging JavaScript" (Oreilly, Learning React, 2016). Oh and i this book they call `Isomorphic Javascript` (same code running on client and server, possibly transpiled for the client, like famoulsly meteor), `Univeral Apps`.
 
-[^6]: [The New Star of Germany’s Far Right
-](http://www.newyorker.com/magazine/2016/10/03/the-new-star-of-germanys-far-right)
+[^6]: [The New Star of Germany’s Far Right](http://www.newyorker.com/magazine/2016/10/03/the-new-star-of-germanys-far-right)
 
 [^7]: The [UI components for Elasticsearch](http://searchkit.co/) are cool!
 
