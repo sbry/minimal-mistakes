@@ -1,5 +1,10 @@
 ---
-title: "the first post is the hardest"
+title: "The First Post is the Hardest"
+layout: single
+published: true
+categories:
+tags:
+date: 2016-09-27 10:28:09
 ---
 
 After a long time I want to continue to write down stuff I do or think about. Next time there is a chance it is here. Also I really like the speed and ease of Git and Github and it might be fun to apply this to hosting.[^4]
@@ -32,7 +37,7 @@ and jQueryy's
 ``` javascript
 $('<div>', {}).appendChild("My Content")
 ```
-is almost the same. Power through simplicity and reliability. 
+is almost the same. Power through simplicity and reliability.
 
 
 <!--
@@ -69,7 +74,7 @@ But these functions are different:
 > Arrow functions do not block off the scope of this.
 
 
-<!-- 
+<!--
 `Destructuring` comes from Perl as well.
 
 ``` perl
@@ -88,7 +93,7 @@ justin@tsoff ~/workspace> du -sch pt-react
 141M    insgesamt
 ```
 
-141M for an empty clone of hello world seems excessive. But node is famous for this and I really like hot-reload and the actual build is only 2M. In fact `atom` makes my old Athlon freeze and [jsx-mode](https://github.com/jsx/jsx-mode.el) is beyond me for now. And talking of performance this [Fork of Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) takes like an hour to build and the development server takes 10s to start. So that is that.
+141M for an empty clone of hello world seems excessive. But node is famous for this and I really like hot-reload and the actual build is only 2M. In fact `atom` makes my old Athlon freeze and [jsx-mode](https://github.com/jsx/jsx-mode.el) is beyond me for now. And talking of performance this [Fork of Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) takes like an hour to build and the development server takes 10s to start. I seriously never thought I might say: "Eclipse is a quick and small app."
 
 And now: good luck committing this and good luck to github building it. Later I will write about the debate and the meaning of the Donald. we have the same kind of people here in Germany[^6] and the new theory is that there always are 20% jerks, which together with the hillary-haters of another 20% just might get Donald elected.[^2] Another factor in all of this is the slight reality removedness (like my own language removedness) that Americans have always had: For example one of them saw the need to [convert between AM-PM and 24 hour notation](http://www.easysurf.cc/cmtime.htm). Beautiful! Go Donald Go! Rip it down, unfortunately Europe might fall as well.
 

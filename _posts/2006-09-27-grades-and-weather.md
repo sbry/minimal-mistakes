@@ -1,6 +1,6 @@
 ---
 title: "A New Dawn"
-layout: post
+layout: single
 published: false
 categories: Thoughts
 tags: 
@@ -20,3 +20,7 @@ Now why are grades harmful? They take the fun out of learning, they reduce the h
 And from a higher perspective Grades are are way for the capital (or the soldier king) to assess the subjects easily and select those to employ, over those to die miserably on their usefulness. Grades this way perpetuate the fatal status quo. 
 
 [^1]: Hard to say if fat people are neurotic about food, I guess. 
+
+
+
+
