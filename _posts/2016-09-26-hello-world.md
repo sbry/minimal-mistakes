@@ -1,51 +1,153 @@
 ---
-title: "The First Post is the Hardest"
+title: "Hello World!"
 layout: single
 published: true
-categories:
+categories: Thoughts
 tags:
 date: 2016-09-27 10:28:09
 ---
 
-After a long time I want to continue to write down stuff I do or think about. Next time there is a chance it is here. Also I really like the speed and ease of Git and Github and it might be fun to apply this to hosting.[^4]
+After a long time I want to continue to write down stuff I do or think
+about. Next time there is a chance it is here.
 
-Today is also the day I decided on how to begin developing react and there are several application that just wait to be written.[^7] After trying several boilerplates from this [Github Search](https://github.com/search?o=desc&q=react+boilerplate&s=stars&type=Repositories&utf8=%E2%9C%93):
+Also I really like the speed, ease and design of Jekyll and its
+beautiful themes and the free hosting and building on github. And
+git is the best version-conrol ever: cloning takes like less time than
+copying, merging is BAM and never makes trouble. And I really did use
+mercurial, and it seems a bit slow. And SVN more so. And CVS, oh
+oh. And RCS (which was super-strange even in 1999)
+
+Today is also the day I decided on how to begin developing react and
+there are several applications that just wait to be written.  The
+[UI components for Elasticsearch](http://searchkit.co/) are cool!
+I tried several boilerplates from this
+[Github Search](https://github.com/search?o=desc&q=react+boilerplate&s=stars&type=Repositories&utf8=%E2%9C%93):
 
 * [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
 * [react-boilerplate](https://github.com/mxstbr/react-boilerplate)
 * [react-slingshot](https://github.com/coryhouse/react-slingshot)
 
-They all have much too complex tooling.  In the fast-changing universe of node that means: They don't work and are not fixable by me without bleeding from the ears. I finally settled on the sensible `npm install -g create-react-app` from [close to the source](https://github.com/facebookincubator/create-react-app):
+They dont work for me, have much too complex tooling and are broken
+because they are older than two weeks. I settled on the sensible `npm
+install -g create-react-app` from
+like [facebook itself](https://github.com/facebookincubator/create-react-app)
+and can recommend it:
 
-> But the Facebook team recognized that as long as there wasn't a core-team sanctioned solution, the community was likely to remain splintered. ([How to get "create-react-app" to work with your API](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/))
+> But the Facebook team recognized that as long as there wasn't a
+> core-team sanctioned solution, the community was likely to remain
+> splintered. ([How to get "create-react-app" to work with your API](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/))
 
-React has another feature that I am quite familiar with, because I invented the "abstraction" in parallel[^8]:
+`webpack` and `babel` are provided with settings from
+`react-scripts`. There is no meaningful project set up yet, which
+means there is nothing one has to delete. I mean that is right, one
+could be programming anything. But it is fully function project with
+some cool examples of how webpack magically handles imported svg and
+css. And there are some Components, which one can swap to another
+syntax.
 
+Reading up on react beginning with an incomplete preview-pdf of
+O'Reilly's "Learning React" several links to existing knowlegde come up.
 
-``` javascript
-React.createElement("div", {'class': 'test'}, "My Content")
+The most controversial part of react has been
+[jsx](https://facebook.github.io/react/docs/jsx-in-depth.html), and it
+turns out that is just a convenience which is then transpiled to
+Reace.createElement()-calls, a way of handling markup that I invented
+in 1999. I write most of my markup that way. Why? I hate
+interpolation, I hate quotes, I hate mixing strings and variables. I
+hate how it looks, I hate how it performs, I hate how it fails, I hate
+how it is unsafe. I hate how lots people actually exist writing code
+like that, for example SQL, but also XML or HTML. But no question that
+was how one wrote stuff in 1999.
+
+For me it began with outputting XML in perl and it was like this. From
+the actual archives, shockingly, but it might render some xml. 
+
+``` perl
+sub tag_out_open{
+    my ( $gi, $att, $ind ) = @_;
+    my $tag_out = " " x $ind . "<$gi";
+    foreach my $key ( sort keys %$att ){
+        $tag_out .= " $key";
+        $tag_out .= "='" ;
+        $tag_out .= $att->{$key};
+        $tag_out .= "'";
+    }
+    $tag_out .=  ">\n";
+    return $tag_out;
+}
+
+##
+# called like this, I also tried to handle indentation because DOM was
+# new and there was  no real Libary for perl. Soon afterwards there
+# were perl-bindings for libxml, which could output beautyfied. These
+# days I use xmllint for human readable xml
+print tag_out_open('test', {'test' => 'test'}');
 ```
 
-compared with my very own
+compared with the reincarnation of perls tag_out_open in PHP5:
 
 ``` php
 $xml->toFull("div", array('class': 'test'), "My Content");
 ```
 
-and jQueryy's
+later I also used jQuery's a bit:
 
 ``` javascript
-$('<div>', {}).appendChild("My Content")
+$('<div>', {}).append("My Content")
 ```
-is almost the same. Power through simplicity and reliability.
+is almost the same. 
 
+In any case I objected strongly against the new template-language,
+because it limits or makes hard what one actually needs to achieve
+(rendering html from the content of variables), but it turns out that
+while when generating XML then attributes often come from variables as
+well (the keys of the dict(), key-value-Dictionaries or hashtables),
+xml like this has fieldnames, which would be terrible to put in templates.
 
-<!--
-And there there are the beautiful `stateless functional components` which are fun in any language.
--->
+``` xml
+<book id="12" title="No Logo" /> 
+```
 
+On the other hand for HTML the attributes are always known and can be
+static strings, and only the values must be interpolated, like src or
+title or class. Which is bad enough.
 
-And my favorite word and action in the node universe at this point: `Transpiling` which describes the process to build browser-readable Vanilla-JS from the hardly recognizable next generation Javascript `ES6`. I was always wondering about `Coffeescript` or in deed `Typescript`. Now I know: they are "transpiled" into vanilla-Javascript as well. `ES6` is transpiled by a friendly library called `babel` which disappointingly used to be called `6to5`. And that is what the NodeJS-people used to use `Grunt` for and now `gulp` and later possibly vanilla `npm`.[^5] Variables in ES6 might be declared via `var`, `const`, or `let`, where `let` resembles perl's `my` and is for closures. And Perl is like 100 years old or s/t. But these strange lambdas I do not like yet:
+JSX in any case is transpiled to vanilla js:
+
+``` javascript
+
+... render(
+<div class=test>MyContent</div>
+);
+
+// becomes
+
+React.createElement("div", {className: "test"}, "My Content")
+
+// and React.createElement() render any content, even with a Factory-Method
+
+return React.DOM.ul({className: "things"},
+            this.props.items.map((thing, i) =>
+                React.createElement("li", { key: i }, ingredient)
+            )
+        )
+```
+
+I really like them for the way rendering of XML-markup: It reminds me
+of mine. I guess I can work with that. 
+
+Then there is my favorite word and action in the node
+universe. `Transpiling` describes the process to build
+browser-readable Vanilla-JS from the hardly recognizable next
+generation Javascript `ES6`. I was always wondering about
+`Coffeescript` or in deed `Typescript`. Now I know: they are
+"transpiled" into vanilla-Javascript as well. `ES6` is transpiled by a
+friendly library called `babel` which disappointingly used to be
+called `6to5`. And that is what the NodeJS-people used to use `Grunt`
+for and now `gulp` and later possibly vanilla `npm`.[^5] Variables in
+ES6 might be declared via `var`, `const`, or `let`, where `let`
+resembles perl's `my` and is for closures. And Perl is like 100 years
+old or s/t. But these strange lambdas I do not like yet:
 
 ``` javascript
 
@@ -73,19 +175,31 @@ But these functions are different:
 
 > Arrow functions do not block off the scope of this.
 
-
-<!--
-`Destructuring` comes from Perl as well.
+There is `Destructuring` as well, which comes from Perl and python , at least the
+destructuring of Lists. 
 
 ``` perl
 my ($test) = qw(one two three);
 ```
-But to do that to Objects is creative and a creative use of implicit introspection. It can even be done backwards where the variable-name is the key: `Object literal enhancement`
 
--->
+The destructuring of Objects is (for me) a bit like PHP's extract(),
+which I never ever use. Bit its quite the syntactic sugar in
+ES6. It can even be done backwards for creation where the
+variable-name is the key: `Object literal enhancement` and works like
+this:
 
+``` javascript
+{test}
+// means 
+{test => test}
+```
 
-So I got my boilerplate, and it works great and there is not so much [wizard code I don't understand](https://pragprog.com/the-pragmatic-programmer/extracts/wizards). But seriously
+No really my thinking at this point.
+
+But I got my boilerplate, and it works great and there is not sooo
+much
+[wizard code I don't understand](https://pragprog.com/the-pragmatic-programmer/extracts/wizards). But
+seriously
 
 ```
 justin@tsoff ~/workspace> du -sch pt-react
@@ -93,9 +207,20 @@ justin@tsoff ~/workspace> du -sch pt-react
 141M    insgesamt
 ```
 
-141M for an empty clone of hello world seems excessive. But node is famous for this and I really like hot-reload and the actual build is only 2M. In fact `atom` makes my old Athlon freeze and [jsx-mode](https://github.com/jsx/jsx-mode.el) is beyond me for now. And talking of performance this [Fork of Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) takes like an hour to build and the development server takes 10s to start. I seriously never thought I might say: "Eclipse is a quick and small app."
+141M for an empty clone of hello world seems excessive. But node is
+famous for this and I **really** like hot-reload and the actual build
+is only 2M. 
 
-And now: good luck committing this and good luck to github building it. Later I will write about the debate and the meaning of the Donald. we have the same kind of people here in Germany[^6] and the new theory is that there always are 20% jerks, which together with the hillary-haters of another 20% just might get Donald elected.[^2] Another factor in all of this is the slight reality removedness (like my own language removedness) that Americans have always had: For example one of them saw the need to [convert between AM-PM and 24 hour notation](http://www.easysurf.cc/cmtime.htm). Beautiful! Go Donald Go! Rip it down, unfortunately Europe might fall as well.
+In fact `atom` takes like 60 s to load and makes my old Athlon freeze
+and [jsx-mode](https://github.com/jsx/jsx-mode.el) is beyond me for
+now. And talking of performance this
+[Fork of Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)
+takes like an hour to build and the development server takes 10s to
+start. I seriously never thought I might say: "Eclipse is a quick and
+small app." 
+
+And now: good luck committing this and good luck to github building
+it. 
 
 
 
@@ -105,15 +230,8 @@ And now: good luck committing this and good luck to github building it. Later I 
 
 
 
-
-[^2]: And it is really easy to become a hater of Hillary's hypocricy even if one is no thruther, or birther, or Benghazian. I mean especially as a Democrat, how Bernie Sanders was treated. And what happened to Seth Rich?
-
-[^4]: And I really did use mercurial, and it really does suck. And SVN. And CVS. And RCS (which was super-strange even in 1999)
 
 [^5]: There is now even ES7 and they are called "emerging JavaScript" (Oreilly, Learning React, 2016). Oh and i this book they call `Isomorphic Javascript` (same code running on client and server, possibly transpiled for the client, like famoulsly meteor), `Univeral Apps`.
 
-[^6]: [The New Star of Germany’s Far Right](http://www.newyorker.com/magazine/2016/10/03/the-new-star-of-germanys-far-right)
 
-[^7]: The [UI components for Elasticsearch](http://searchkit.co/) are cool!
 
-[^8]: mine is actually from 1999, and the original is in perl, I will link it later
