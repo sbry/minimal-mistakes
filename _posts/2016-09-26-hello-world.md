@@ -11,7 +11,7 @@ After a long time I want to continue to write down stuff I do or think
 about. Next time there is a chance it is here.
 
 Also I really like the speed, ease and design of Jekyll and its
-beautiful themes and the free hosting and building on github. And
+beautiful themes[^6] and the free hosting and building on github. And
 git is the best version-conrol ever: cloning takes like less time than
 copying, merging is BAM and never makes trouble. And I really did use
 mercurial, and it seems a bit slow. And SVN more so. And CVS, oh
@@ -235,3 +235,8 @@ it.
 
 
 
+[^6]: Let alone [Octoptress](http://octopress.org), "an obsessively
+    designed toolkit". But I rather wanted a plainer, jekyll, which
+    unfortunately came without Post-creation-script. Octopress is
+    beautiful, i think they say
+    [like this one i was just reading](http://aviadas.com/blog/2015/09/06/building-realtime-apps-with-react/)
