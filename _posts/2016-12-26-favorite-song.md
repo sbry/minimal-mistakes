@@ -1,6 +1,6 @@
 ---
 title: "Favorite Song"
-layout: post
+xlayout: single
 published: true
 categories: Thoughts
 tags: 
