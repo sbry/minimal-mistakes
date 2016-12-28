@@ -33,12 +33,12 @@ But the worst has yet to come. There is a [Second unbeaten home league record
 
 And now this Boxing Day Mourinho's Manchester United played Sunderland
 at home, MUN as [livetv.tu](a sports channel on the internet)
-subtitled. Scoring one of the greatest goals of world history:
+subtitled. Scoring one of the greatest goals of world history (1m9s):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-sd9_yNh36M?t=1m9s" frameborder="0" allowfullscreen></iframe>
 
 And now yesterday a certain Firmino at Anfield Stadium did something
-differnt for Liverpool:
+different for Liverpool (6m25s):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mUeZXG7vdJg?t=6m25s" frameborder="0" allowfullscreen></iframe>
 
