@@ -1,6 +1,6 @@
 ---
-title: "The cleanest Sheet"
-layout: page
+title: "The Cleanest Sheet"
+layout: single
 published: true
 categories: Thoughts
 tags: Clean Sheet
