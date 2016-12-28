@@ -1,15 +1,13 @@
 ---
 title: "Favorite Song"
-xlayout: single
+layout: single
 published: true
 categories: Thoughts
 tags: 
 date: 2016-12-26 00:05:02
 ---
 
-# favorite song # 
-
-Here it was christmas and I wanted to listen lo our favorite song.
+Here it was christmas and I wanted to listen to our favorite song.
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/Ibm8ZWpPbv8?list=RDIbm8ZWpPbv8"
